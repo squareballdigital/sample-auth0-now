@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "builds": [{ "src": "functions/test.js", "use": "@now/node" }]
+  "builds": [{ "src": "functions/authorize.js", "use": "@now/node" }],
+  "routes": [
+    { "src": "/(.*)", "dest": "functions/authorize.js" }
+]
 }
