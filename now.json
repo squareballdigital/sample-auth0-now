@@ -1,0 +1,4 @@
+{
+  "version": 2,
+  "builds": [{ "src": "functions/test.js", "use": "@now/node" }]
+}
