@@ -2,34 +2,43 @@
 Sample M2M Authorization demonstration using Auth0 and Zeit Now to deploy a serverless node function. 
 The secured endpoint can be found in `functions/authorize.js`
 
-#Demo Instructions
+## Demo Instructions
 
-Install dependencies
+### Install dependencies
+
 `yarn install`
 
-Go to demo directory 
+### Go to demo directory 
+
 `cd demo`
 
-To attempt unauthorized access to the secured endpoint
-`node getSecuredResource.js`
+### To attempt unauthorized access to the secured endpoint
 
-To obtain a valid accessToken
-`node requestAccessToken.js`
+run `node getSecuredResource.js`
 
-To attempt authorized access to the secured endpoint
-`node getSecuredResource --accessToken={YOUR_ACCESS_TOKEN}
+### To obtain a valid accessToken
+
+run `node requestAccessToken.js`
+
+### To attempt authorized access to the secured endpoint
+
+run `node getSecuredResource --accessToken={YOUR_ACCESS_TOKEN}`
 
 
-#Deploy Instructions
+## Deploy Instructions
 
-Make sure you have `now` installed
-`yarn global add now`
+### Make sure you have `now` installed
 
-To deploy an insolated instance 
-`now`
+run `yarn global add now`
 
-To deploy to the production namespace (https://auth0-sb.now.sh)
-`now --target production`
+### Deploy an isolated instacnce
 
-To switch what profile you are deploying with
-`now switch`
+run `now`
+
+### To deploy to the production namespace (https://auth0-sb.now.sh)
+
+run `now --target production`
+
+### To switch what profile you are deploying with
+
+run `now switch`
