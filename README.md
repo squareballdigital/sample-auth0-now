@@ -31,7 +31,7 @@ run `node getSecuredResource --accessToken={YOUR_ACCESS_TOKEN}`
 
 run `yarn global add now`
 
-### Deploy an isolated instacnce
+### To deploy an isolated instacnce
 
 run `now`
 
