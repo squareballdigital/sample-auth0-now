@@ -1,6 +1,6 @@
 # sample-auth0-now
-Sample M2M Authorization demonstration using Auth0 and Zeit Now to deploy a serverless node function. 
-The secured endpoint can be found in `functions/authorize.js`
+Sample M2M Authorization demonstration using Auth0 and Zeit Now to deploy a serverless node function secured with JWT and using Auth0 for auth management. 
+The secured endpoint code can be found in `functions/authorize.js`
 
 ## Demo Instructions
 
