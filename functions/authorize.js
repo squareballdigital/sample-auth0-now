@@ -2,8 +2,7 @@ var express = require('express');
 var app = express();
 var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
-
-console.log('this is a test')
+var endOfLine = require('os').EOL;
   
 var jwtCheck = jwt({
   secret: jwks.expressJwtSecret({
@@ -19,8 +18,15 @@ var jwtCheck = jwt({
 
 app.use(jwtCheck);
 
+app.use(function (err, req, res, next) {
+  if (err.name === 'UnauthorizedError') {
+    res.status(401).send(`${endOfLine} Unauthorized! ${endOfLine}`);
+  }
+});
+
 app.get('/', function (req, res) {
-  res.send('Secured Resource');
+  res.send(`${endOfLine} Token is validated. Access Granted ${endOfLine} 
+    `);
 });
 
 module.exports = app

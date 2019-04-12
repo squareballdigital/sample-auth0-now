@@ -3,5 +3,6 @@
   "builds": [{ "src": "functions/authorize.js", "use": "@now/node" }],
   "routes": [
     { "src": "/(.*)", "dest": "functions/authorize.js" }
-]
+   ],
+  "alias": "auth0-sb"
 }
